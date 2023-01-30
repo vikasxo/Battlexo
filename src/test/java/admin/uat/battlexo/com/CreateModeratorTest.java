@@ -25,12 +25,9 @@ public class CreateModeratorTest extends BaseClass
 		wlib.waitForPageToLoad(driver);
 		HomePage homePage=new HomePage(driver);
 		homePage.moderatorsModule();
-		
 		AddModeratorButton addModeratorButton=new AddModeratorButton(driver);
 		Thread.sleep(2000);
 		addModeratorButton.addModeratorButton();
-		JavascriptExecutor js = (JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,5000)");
 //		Assert.assertEquals(false, true);
 		AddModeratorPage addModeratorPage=new AddModeratorPage(driver);
 		addModeratorPage.addModeratorDetails(jlib.getRandomName(),jlib.getRandomEmail(),jlib.getRandomPhoneNumber());
